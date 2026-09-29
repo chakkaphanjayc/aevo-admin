@@ -1,0 +1,27 @@
+{
+  "name": "aevo-admin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun run --cwd apps/admin dev",
+    "dev:tunnel": "AEVO_DEV_TUNNEL=1 bun run --cwd apps/admin dev",
+    "build": "bun run --cwd apps/admin build",
+    "start": "bun run --cwd apps/admin start",
+    "deploy:preview": "bun run --cwd apps/admin deploy:preview",
+    "deploy:staging": "bun run --cwd apps/admin deploy:staging",
+    "deploy:production": "bun run --cwd apps/admin deploy:production",
+    "typecheck": "bun run --cwd apps/admin typecheck",
+    "check": "bun run typecheck && bun run build"
+  },
+  "engines": {
+    "bun": ">=1.2.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.21"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "aevo-admin",
+  "main": "./workers/app.ts",
+  "compatibility_date": "2026-09-22",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "AEVO_APP_CODE": "ADMIN",
+    "AEVO_ENVIRONMENT": "preview",
+    "AEVO_API_URL": ""
+  },
+  "env": {
+    "preview": {
+      "name": "aevo-admin-preview",
+      "vars": {
+        "AEVO_APP_CODE": "ADMIN",
+        "AEVO_ENVIRONMENT": "preview",
+        "AEVO_API_URL": ""
+      }
+    },
+    "staging": {
+      "name": "aevo-admin-staging",
+      "vars": {
+        "AEVO_APP_CODE": "ADMIN",
+        "AEVO_ENVIRONMENT": "staging",
+        "AEVO_API_URL": ""
+      }
+    },
+    "production": {
+      "name": "aevo-admin-production",
+      "vars": {
+        "AEVO_APP_CODE": "ADMIN",
+        "AEVO_ENVIRONMENT": "production",
+        "AEVO_API_URL": ""
+      }
+    }
+  }
+}

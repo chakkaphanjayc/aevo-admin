@@ -1,0 +1,16 @@
+node_modules/
+.bun/
+
+dist/
+build/
+.react-router/
+.wrangler/
+.dev.vars*
+*.tsbuildinfo
+
+.env
+.env.local
+.env.*.local
+
+*.log
+.DS_Store
